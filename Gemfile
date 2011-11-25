@@ -6,6 +6,10 @@ gem 'rails', '3.1.3'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 # See http://stackoverflow.com/questions/3897431/deploying-ror-app-to-heroku-with-sqlite3-fails
+group :production, :staging do
+  gem 'pg'
+end
+
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
 end
